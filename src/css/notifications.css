@@ -1,0 +1,72 @@
+.notifications {
+    backdrop-filter: blur(20px);
+    display: block;
+    background: #08080830;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.notifications .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 30px;
+    height: calc(100vh - 30px);
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+}
+
+.notifications .container::-webkit-scrollbar-track,
+.notifications .container::-webkit-scrollbar,
+.notifications .container::-webkit-scrollbar-thumb {
+    width: 0;
+    background-color: transparent;
+}
+
+
+.notif {
+    border-radius: 6px;
+    background: #101010;
+    border: 1px solid #696969;
+    padding: 20px 20px;
+    margin: auto;
+    margin-bottom: 50px;
+    width: 80%;
+    max-width: 1500px;
+    height: auto;
+}
+
+.notif-header {
+    text-transform: uppercase;
+    font-size: 600;
+    font-family: 'Sen', sans-serif;
+    color: #fff;
+    padding: 20px 20px;
+}
+
+.notif-body {
+    display: flex;
+    width: 100%;
+}
+
+.notif-body img {
+    border-radius: 6px;
+    width: 100%;
+    height: auto;
+
+}
+
+.notif-footer {
+    width: 100%;
+}
+
+.notif-footer p {
+    font-family: 'Sen', sans-serif;
+    color: #696969;
+    margin-top: 10px;
+}

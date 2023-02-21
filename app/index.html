@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eronix v1.2</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".././src/css/style.css">
+    <link rel="stylesheet" href=".././src/css/window.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <script defer src=".././src/js/windowRender.js"></script>
+</head>
+
+<body>
+    <section class="windows">
+        <div class="window">
+            <div class="container">
+                <div class="window-move"></div>
+                <div class="window-button">
+                    <button class="window-button" id="minimizeBtn"><i class="fa-regular fa-minus"></i></button>
+                    <button class="window-button" id="maximizeBtn"><i class="fa-regular fa-square"></i></button>
+                    <button class="window-button closed" id="closeBtn"><i class="fa-regular fa-xmark-large"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="formLogin">
+            <div id="form">
+                <h1>Se connecter</h1>
+                <input id="email" type="text" class="input" required="" placeholder="Email">
+                <input id="password" type="password" class="input" required="" placeholder="Mot de passe">
+                <button class="loginBtn" onclick="login()">Valider</button>
+            </div>
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="./client/firebase.js"></script>
+    <script src=".././src/js/authClient.js"></script>
+</body>
+
+</html>

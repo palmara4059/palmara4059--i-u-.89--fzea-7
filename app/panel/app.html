@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eronix v1.2</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../.././src/css/style.css">
+    <link rel="stylesheet" href="../.././src/css/window.css">
+    <link rel="stylesheet" href="../.././src/css/settings.css">
+    <link rel="stylesheet" href="../.././src/css/notifications.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <script defer src="../.././src/js/windowRender.js"></script>
+</head>
+
+<body>
+    <div class="window">
+        <div class="container">
+            <div class="window-move"></div>
+            <div class="window-button">
+                <button class="window-button" id="minimizeBtn"><i class="fa-regular fa-minus"></i></button>
+                <button class="window-button" id="maximizeBtn"><i class="fa-regular fa-square"></i></button>
+                <button class="window-button closed" id="closeBtn"><i class="fa-regular fa-xmark-large"></i></button>
+            </div>
+        </div>
+    </div>
+    <section class="windows">
+        <div class="windows-filter"></div>
+    </section>
+
+    <section class="header">
+        <div class="container">
+            <p class="title" id="coucou">ERONIX</p>
+        </div>
+    </section>
+
+    <div class="alert-update" id="alertLaunch">⏳ lancement du jeu en cours!</div>
+
+
+    <div class="sidebar">
+        <div class="container">
+            <ul>
+                <span id="online"></span>
+                <button id="profiled">
+                    <img id="pdpMC" src="https://minotar.net/helm/0z5ez0a51r/40.png">
+                </button>
+            </ul>
+            <ul>
+                <button onclick="play()" id="playLaunch"><i class="fa-light fa-play" id="played"></i></button>
+                <button onclick="openSettings()"><i class="fa-light fa-gear"></i></button>
+                <button onclick="notifier()"><i class="fa-light fa-bell" id="newNotif"></i></button>
+                <button onclick="logout()"><i class="fa-light fa-right-from-bracket"></i></button>
+            </ul>
+        </div>
+    </div>
+
+    <div class="updates">
+        <div class="container">
+            <h1>Dernières nouvelles ?</h1>
+            <div class="updates-container" id="newsAuto">
+            </div>
+        </div>
+    </div>
+
+    <section class="footer">
+        <div class="container">
+            <p> <span>Eronix</span>・2023 - Tous droits réservés.</p>
+            <p>non affilié à mojang, AB.</p>
+        </div>
+    </section>
+
+    <div class="settings" id="modalSettings">
+        <button onclick="closeSettings()" class="closeModal"><i class="fa-light fa-xmark"></i></button>
+        <div class="container">
+            <div class="settings-header">
+                <h1>Paramètres launcher</h1>
+                <p>Espace de gestion du launcher.</p>
+            </div>
+            <div class="group">
+                <div class="header-group">
+                    <h1>Paramètres utilisateurs</h1>
+                    <div class="hr"></div>
+                </div>
+                <div class="container-group">
+                    <button onclick="openModalAccount()">Mon compte</button>
+                </div>
+            </div>
+            <div class="group">
+                <div class="header-group">
+                    <h1>Paramètres Java</h1>
+                    <div class="hr"></div>
+                </div>
+                <div class="container-group">
+                    <button onclick="openModalRam()">Mémoire Ram</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalRam" id="modalRam">
+            <button onclick="closeModalRam()" class="closeModal"><i class="fa-light fa-xmark"></i></button>
+            <div class="sett-box">
+                <div class="slider">
+                    <p>Ram Maximale allouer [<span class="range-value" id="rangeValue">0</span>G]</p>
+                    <input class="range-slider" id="rangeSlider" type="range" value="0" min="1" max="8">
+                </div>
+            </div>
+        </div>
+
+        <div class="modalAccount" id="modalAccount">
+            <button onclick="closeModalAccount()" class="closeModal"><i class="fa-light fa-xmark"></i></button>
+            <div class="container">
+                <div class="group-account">
+                    <div class="ul">
+                        <div class="group-img">
+                            <img src="https://minotar.net/helm/0z5ez0a51r/40.png" id="groupIMG">
+                        </div>
+                        <div class="group-content">
+                            <span id="groupNAME"></span>
+                            <p id="groupID"></p>
+                        </div>
+                    </div>
+                    <div class="ul">
+                        <div class="group-skin">
+                            <img src="https://minotar.net/armor/body/0z5ez0a51r/40.png" id="groupSkin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src=".././client/firebase.js"></script>
+    <script src=".././client/discordRPC.js"></script>
+    <script src=".././client/managerClient.js"></script>
+    <script src=".././client/launchClient.js"></script>
+    <script src=".././client/installerClient.js"></script>
+</body>
+
+</html>

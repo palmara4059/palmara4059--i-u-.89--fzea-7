@@ -1,0 +1,344 @@
+.settings {
+    backdrop-filter: blur(20px);
+    display: none;
+    background: #08080830;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.settings .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 30px;
+    height: calc(100vh - 30px);
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+}
+
+
+.settings .container::-webkit-scrollbar-track,
+.settings .container::-webkit-scrollbar,
+.settings .container::-webkit-scrollbar-thumb {
+    width: 0;
+    background-color: transparent;
+}
+
+.settings-header {
+    text-align: center;
+    width: 80%;
+    padding: 10px 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.settings-header h1 {
+    font-family: 'Sen', sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.settings-header p {
+    font-family: 'Sen', sans-serif;
+    color: #b4b4b4;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    background: #13131300;
+    border: 1px solid #c9c9c9;
+    border-radius: 6px;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.group .hr {
+    background: #b1b1b1;
+    width: 100%;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+}
+
+
+.group #launcherSlider {
+    width: 50px;
+    height: 20px;
+}
+
+#launcherSlider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: -5px;
+    height: 15px;
+    width: 300px;
+    appearance: none;
+    background: #10101050;
+    outline: none;
+    border-radius: 15px;
+}
+
+#launcherSlider::-webkit-slider-thumb {
+    appearance: none;
+    background: #ffffff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.checker {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.checker h1 {
+    font-family: 'Sen', sans-serif;
+    color: #c7c7c7;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+}
+
+.header-group h1 {
+    text-align: center;
+    font-family: 'Sen', sans-serif;
+    color: #999999;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.container-group button {
+    font-family: 'Sen', sans-serif;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 15px 10px;
+    width: 100%;
+    color: #c7c7c7;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: .3s ease-out;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.container-group button:hover {
+    background: #00000080;
+    color: #ffffffcc;
+}
+
+
+.modalRam {
+    display: none;
+    background: #00000030;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    backdrop-filter: blur(5px);
+}
+
+.sett-box {
+    border-radius: 5px;
+    width: 500px;
+    height: auto;
+    padding: 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px, rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    color: #fff;
+    background: #171717;
+    margin: auto;
+    border: 1px solid #363636;
+}
+
+
+
+.sett-box-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sett-box-header span {
+    width: 30%;
+    height: 1px;
+    background: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sett-box-header h1 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'Sen', sans-serif;
+}
+
+.slider {
+    padding: 10px 10px;
+}
+
+.slider p {
+    font-family: 'Sen', sans-serif;
+}
+
+.range-slider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: -5px;
+    height: 15px;
+    width: 300px;
+    appearance: none;
+    background: #101010;
+    outline: none;
+    border-radius: 15px;
+}
+
+.range-slider::-webkit-slider-thumb {
+    appearance: none;
+    background: #303030;
+    border: 2px solid #101010;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+}
+
+.closeModal {
+    display: flex;
+    border: 1px solid #a8a8a8;
+    background: transparent;
+    color: #a8a8a8;
+    font-size: 1.5rem;
+    border-radius: 16px;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    transition: .5s ease-out;
+}
+
+.closeModal:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.closeModal i {
+    margin: auto;
+}
+
+
+/*----------[ACCOUNT]----------*/
+.modalAccount {
+    backdrop-filter: blur(20px);
+    display: none;
+    background: #08080840;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.group-account {
+    display: flex;
+    flex-direction: column;
+    background: #c4c4c4;
+    border: 1px solid #3d3d3d;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 6px;
+    margin: auto;
+    width: 460px;
+    height: max-content;
+    padding: 0 10px 0 0;
+    transition: .5s ease-in-out;
+}
+
+.group-account:hover {
+    background: #daffec;
+}
+
+.group-account .ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.group-img {
+    border-radius: 6px;
+    padding: 10px 10px;
+    background: #fff;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.group-account .group-img img {
+    border-radius: 6px;
+    width: 50px;
+    height: 50px;
+}
+
+.group-content {
+    padding: 10px 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    margin-right: auto;
+}
+
+.group-content span {
+    font-family: 'Sen', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #00003a;
+}
+
+.group-content p {
+    font-size: .9rem;
+    font-family: 'Sen', sans-serif;
+    color: #2828ff;
+}
+
+
+.group-skin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.group-skin img {
+    padding: 20px 20px;
+    margin-bottom: 10px;
+}
